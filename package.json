@@ -1,0 +1,25 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "We have created the document managment system using the NodeJS and MongoDB and GRPC(for communication for microservices).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vejjutejdeep/assessment.git"
+  },
+  "author": "vejju tejdeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vejjutejdeep/assessment/issues"
+  },
+  "homepage": "https://github.com/vejjutejdeep/assessment#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.0",
+    "nodeman": "^1.1.2"
+  }
+}
