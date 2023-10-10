@@ -20,15 +20,25 @@ async function save(body) {
 
 async function login(body) {
     try {
-        if (!body.name ||  !body.password) {
-            throw new Error()
+        // if (!body.name ||  !body.password) {
+        //     throw new Error()
+        // }
+        
+        console.log(body)
+
+        const response = await dmsmodel.findOne({
+            username: body.name,
+        }).exec();
+        console.log(response.password)
+        if (response.password == body.password){
+            return {"message":"user can be logged in"};
         }
-    const response = await dmsmodel.findOne({
-        username: body.name,
-    }).exec();
-    return {"message":"user can be logged in"};
+        else{
+            return {"message":"user password is incorrect"};
+        }
+
     } catch (err) {
-        return {"message":"user has not been created successfully"};
+        return {"message":"user does not exist"};
     }
 
 }
