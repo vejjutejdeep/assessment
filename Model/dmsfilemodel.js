@@ -20,6 +20,6 @@ const files = new mongoose.Schema({
 
 }, {timestamps: true});
 
-const UserSchema = mongoose.model('user', Users) ;
+const filesSchema = mongoose.model('files', files) ;
 
-module.exports = UserSchema;
+module.exports = filesSchema;
