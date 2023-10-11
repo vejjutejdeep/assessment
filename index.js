@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dmsrouter = require('./routes/dmsrouter');
+const dmsfilerouter = require('./routes/dmsfilesrouter');
+const dmsfolderrouter = require('./routes/dmsfolderrouter');
 
 const app = express();
 
@@ -17,6 +19,9 @@ mongoose.connect(
   });
 
 app.use("/",dmsrouter);
+app.use("/file/",dmsfilerouter);
+app.use("/folder/",dmsfolderrouter);
+
 app.listen(3000, () => {
   console.log("Server is running...");
 });

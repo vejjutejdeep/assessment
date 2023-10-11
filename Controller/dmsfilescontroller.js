@@ -41,7 +41,7 @@ async function fileretrive(body){
 
     try{
 
-        if (!body.userid || !body.filename || !body.folderid) {
+        if (!body.userid || !body.filename) {
 
             return {"message": "parameters required are not provided"}
         }
